@@ -3,7 +3,7 @@ class User {
     this.username = username;
     this.password = password;
     this.age = age;
-    this.loggedIn = false; // User is not logged in initially
+    this.loggedIn = false;
   }
 
   login(password) {

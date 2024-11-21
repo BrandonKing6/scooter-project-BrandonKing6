@@ -69,7 +69,7 @@ class ScooterApp {
     for (const station in this.stations) {
       const index = this.stations[station].indexOf(scooter);
       if (index !== -1) {
-        this.stations[station].splice(index, 1); // Remove from the station
+        this.stations[station].splice(index, 1);
         scooter.rent(user);
         console.log("Scooter is rented.");
         return;

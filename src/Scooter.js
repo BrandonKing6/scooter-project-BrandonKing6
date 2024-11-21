@@ -1,12 +1,12 @@
 class Scooter {
-  static nextSerial = 1; // Static property to keep track of serial numbers
+  static nextSerial = 1;
 
   constructor(station) {
-    this.station = station;   // The station the scooter is docked at
-    this.user = null;         // No user initially
-    this.serial = Scooter.nextSerial++;  // Assign serial number and increment for next
-    this.charge = 100;        // Fully charged initially
-    this.isBroken = false;    // Not broken initially
+    this.station = station;
+    this.user = null;
+    this.serial = Scooter.nextSerial++;
+    this.charge = 100;
+    this.isBroken = false;
   }
 
   rent(user) {
@@ -22,13 +22,13 @@ class Scooter {
 
   dock(station) {
     this.station = station;
-    this.user = null; // Clearing the user
+    this.user = null;
   }
 
   recharge() {
     let intervalId = setInterval(() => {
       if (this.charge < 100) {
-        this.charge += 10; // Increment the charge by 10
+        this.charge += 10;
         console.log(`Charging... ${this.charge}%`);
       } else {
         clearInterval(intervalId);
